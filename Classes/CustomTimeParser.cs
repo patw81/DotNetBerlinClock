@@ -14,7 +14,7 @@ namespace BerlinClock.Classes
 
         private readonly Regex regex;
 
-        public string TimeFormat { get; } = $"(?<{Hour}>(0[0-9]|1[0-9]|2[0-4])):(?<{Minute}>[0-5][0-9]):(?<{Second}>[0-5][0-9])";
+        public string TimeFormat { get; } = $"^((?<{Hour}>(0[0-9]|1[0-9]|2[0-3])):(?<{Minute}>[0-5][0-9]):(?<{Second}>[0-5][0-9])|(?<{Hour}>24):(?<{Minute}>00):(?<{Second}>00))$";
 
         public CustomTimeParser()
         {

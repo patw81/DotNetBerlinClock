@@ -10,7 +10,7 @@ namespace BerlinClock.Classes
         private readonly ITimeParser timeParser;
         private readonly string separator;
 
-        // using constructor parameters allows us to configure it in IoC container easily
+        // using constructor parameters allows us to configure it in IoC container and test it easily
         public TimeConverter(IEnumerable<ITimePartConverter> converters, ITimeParser timeParser, string separator)
         {
             this.converters = converters;
